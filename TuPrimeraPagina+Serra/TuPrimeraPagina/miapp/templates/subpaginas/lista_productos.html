@@ -1,0 +1,11 @@
+{% extends 'template.html' %}
+
+{% block content %}
+    <h2>Lista de Productos</h2>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_producto' %}">Crear Producto</a>
+{% endblock %}

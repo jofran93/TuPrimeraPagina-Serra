@@ -1,0 +1,12 @@
+{% extends 'template.html' %}
+
+{% block content %}
+    <h2>Crear Producto</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+    <br>
+    <a href="{% url 'lista_productos' %}">Volver a la lista de productos</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "template.html "%}
+
+{% block title %}Empleados{% endblock %}
+
+{% block content %}
+	<h2> Empleados </h2>
+	<form method="post">
+		{{ form3.as_p }}
+		{% csrf_token %}
+			<button type="submit" class="btn"> Guardar Empleado</button>
+	</from>
+{% endblock %}
